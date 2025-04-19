@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janoi Ceremony Invitation</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #FF9933;
+            --gold: #FFD700;
+            --maroon: #800000;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #fff5e6, #fff);
+            overflow-x: hidden;
+        }
+
+        .sacred-text {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .glow {
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .mandala {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: -1;
+            animation: rotate 60s linear infinite;
+        }
+
+        .vedic-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1585504198199-20277593b94f');
+            background-size: cover;
+            opacity: 0.1;
+            z-index: -2;
+        }
+
+        .boy-silhouette {
+            position: fixed;
+            bottom: 0;
+            width: 200px;
+            height: 300px;
+            background-image: url('https://images.unsplash.com/photo-1599689018034-48e2ead82951');
+            background-size: cover;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px var(--gold); }
+            50% { text-shadow: 0 0 20px var(--gold); }
+            100% { text-shadow: 0 0 5px var(--gold); }
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .timeline-item {
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: scale(1.05);
+        }
+
+        .custom-button {
+            background: linear-gradient(45deg, var(--saffron), var(--gold));
+            transition: all 0.3s ease;
+        }
+
+        .custom-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="vedic-bg"></div>
+    <img src="https://images.unsplash.com/photo-1589813975435-788f9269bd5d" class="mandala" alt="Mandala">
+    <div class="boy-silhouette" style="left: 0;"></div>
+    <div class="boy-silhouette" style="right: 0; transform: scaleX(-1);"></div>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center py-16">
+            <div class="sacred-text text-6xl md:text-8xl text-maroon glow mb-8">ॐ</div>
+            <h1 class="sacred-text text-4xl md:text-6xl text-maroon mb-4 floating">
+                You're Invited to the Sacred Janoi Sanskar
+            </h1>
+            <p class="text-xl text-gray-700">A divine celebration of tradition and spirituality</p>
+        </section>
+
+        <!-- Ceremony Details -->
+        <section class="bg-white bg-opacity-80 rounded-lg p-8 mb-12 shadow-xl">
+            <h2 class="sacred-text text-3xl text-center text-maroon mb-6">Ceremony Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="text-center">
+                    <p class="text-2xl text-gold">Yagna Amit Oza</p>
+                    <p class="text-2xl text-gold">Om Asit Oza</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-xl">Date: 29th May 2025</p>
+                    <p class="text-xl">Time: From 2 PM onwards</p>
+                    <p class="text-xl">Venue: Agrasen Foundation</p>
+                    <a href="https://maps.app.goo.gl/nK695exvB4dAG4Dk6" target="_blank" class="custom-button inline-block mt-4 px-6 py-2 rounded-full text-white">
+                        <i class="bi bi-geo-alt"></i> View Location
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule -->
+        <section class="bg-white bg-opacity-80 rounded-lg p-8 mb-12 shadow-xl">
+            <h2 class="sacred-text text-3xl text-center text-maroon mb-6">Ceremony Schedule</h2>
+            <div class="space-y-4">
+                <div class="timeline-item p-4 bg-orange-50 rounded-lg">
+                    <h3 class="text-xl font-semibold">Arrival & Welcome</h3>
+                    <p>2:00 PM - Traditional welcome with tilak and aarti</p>
+                </div>
+                <div class="timeline-item p-4 bg-orange-50 rounded-lg">
+                    <h3 class="text-xl font-semibold">Vedic Chanting</h3>
+                    <p>2:30 PM - Sacred mantras and prayers</p>
+                </div>
+                <div class="timeline-item p-4 bg-orange-50 rounded-lg">
+                    <h3 class="text-xl font-semibold">Yajnopavita Ceremony</h3>
+                    <p>3:00 PM - The sacred thread ceremony</p>
+                </div>
+                <div class="timeline-item p-4 bg-orange-50 rounded-lg">
+                    <h3 class="text-xl font-semibold">Bhojan</h3>
+                    <p>4:30 PM - Traditional feast</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section class="bg-white bg-opacity-80 rounded-lg p-8 mb-12 shadow-xl">
+            <h2 class="sacred-text text-3xl text-center text-maroon mb-6">RSVP</h2>
+            <form class="max-w-md mx-auto">
+                <div class="mb-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-2 border rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Your Email" class="w-full p-2 border rounded-lg">
+                </div>
+                <div class="mb-4">
+                    <select class="w-full p-2 border rounded-lg">
+                        <option>Number of Guests</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4+</option>
+                    </select>
+                </div>
+                <button type="submit" class="custom-button w-full py-2 rounded-lg text-white">
+                    Confirm Attendance
+                </button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-8">
+            <p class="text-gray-600">Contact: 9879791327</p>
+            <div class="mt-4">
+                <a href="#" class="custom-button px-6 py-2 rounded-full text-white inline-block">
+                    Learn more about Janoi
+                </a>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Audio Player -->
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="audioToggle" class="fixed bottom-4 right-4 bg-white p-3 rounded-full shadow-lg">
+        <i class="bi bi-music-note-beamed"></i>
+    </button>
+
+    <script>
+        const audio = document.getElementById('bgMusic');
+        const audioToggle = document.getElementById('audioToggle');
+        let isPlaying = false;
+
+        audioToggle.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                audioToggle.innerHTML = '<i class="bi bi-music-note-beamed"></i>';
+            } else {
+                audio.play();
+                audioToggle.innerHTML = '<i class="bi bi-pause-fill"></i>';
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
